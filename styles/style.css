@@ -32,8 +32,10 @@ img{
     color: white;
     padding: 10px 15px;
 }
-
-
+section{
+    width: var(--width);
+    color: var(--primary-color);
+}
 :root{
     --width: 1050px;
     --primary-color: #3A3A3A;
@@ -96,7 +98,46 @@ header{
     
 }
 
-
+/* Social section  */
+.social-web{
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    /* gap: 50px; */
+    align-items: center;
+    margin:100px auto;
+    max-width: 950px;
+}
+.web{
+    margin: 14px;
+}
+/* Populer section  */
+.populer{
+    margin: auto;
+}
+#title{
+    text-align: center;
+    padding: 2px;
+    margin-bottom: 25px;
+}
+.box{
+    width: 300px;
+    height: 300px;
+    margin: 6px;
+    padding: 8px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 15%);
+}
+.box-er-bap{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin: auto;
+}
+.box h1, h2, p{
+    padding: 0;
+    margin: 2px;
+}
+.box-img{
+    height: 175px;
+}
 
 @media screen and (max-width:576px) {
     .navbar{
@@ -131,5 +172,24 @@ header{
         width: 300px;
         height: 290px;
     }
-    
+    .social-web{
+        grid-template-columns: repeat(4, 1fr);
+        max-width: 100%;
+    }
+    .box-er-bap{
+        grid-template-columns: repeat(1, 1fr);
+        gap: 10px;
+    }
+    .box{
+        margin: auto;
+    }
+    #title{
+        width: 100%;
+    }
+    .title{
+        font-size: 1rem;
+    }
+    .populer{
+        width: 100%;
+    }
 }
